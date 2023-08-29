@@ -123,7 +123,6 @@ function OfferCreation() {
     <div className="offer_creation">
       <HeaderBasic />
       <div className="boxWithoutHeader">
-        {/* {!posted && ( */}
         <div>
           <div className="page_title">
             <h1>Nouvelle offre</h1>
