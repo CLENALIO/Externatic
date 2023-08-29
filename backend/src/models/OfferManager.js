@@ -163,7 +163,9 @@ class OfferManager extends AbstractManager {
   }
 
   findCities() {
-    return this.database.query(`select DISTINCT city_job from  ${this.table}`);
+    return this.database.query(
+      `select DISTINCT city_job from  ${this.table} order by city_job asc`
+    );
   }
 
   findAllwithdetails() {

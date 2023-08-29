@@ -177,16 +177,12 @@ function OfferCreation() {
                 type="text"
               />
 
-              <InputListe
+              <InputTexte
                 label="Localisation"
-                placeholder="Selectionner la ville"
+                placeholder="Indiquer la ville"
                 name="city_job"
                 handleChange={handleChange}
-                data={[
-                  { value: "Nantes", name: "Nantes" },
-                  { value: "Angers", name: "Angers" },
-                  { value: "Bordeaux", name: "Bordeaux" },
-                ]}
+                type="text"
               />
 
               <InputListe
