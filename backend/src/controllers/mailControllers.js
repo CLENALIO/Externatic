@@ -233,11 +233,9 @@ const sendUserAccountCreation = (req, res) => {
                                             <div
                                                 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555;">
                                                 Bienvenue chez Externatic ! <br>Nous sommes ravis de vous compter parmi nos
-                                                candidats. <br><br> Votre candidature a bien été prise en compte. Nous
-                                                vous recontacterons dans les plus brefs délais.<br><br> En attendant,
-                                                n'hésitez pas à consulter nos offres d'emploi sur notre site internet
-                                                <a href="https://externatic.fr" style="color:#a42056">externatic.fr</a>
-                                                ou en cliquant sur le bouton ci-dessous.
+                                                candidats. <br><br>
+                                                N'hésitez pas à consulter nos offres d'emploi sur notre site internet
+                                                <a href="http://localhost:3000" style="color:#a42056">externatic.fr</a>.
 
                                                 <br>
                                                 <br>
@@ -246,39 +244,17 @@ const sendUserAccountCreation = (req, res) => {
 
                                         </td>
                                     </tr>
-
-                                    <tr>
-                                        <td align="center"
-                                            style="font-size:0px;padding:10px 25px;padding-top:30px;padding-bottom:50px;word-break:break-word;">
-
-                                            <table align="center" border="0" cellpadding="0" cellspacing="0"
-                                                role="presentation" style="border-collapse:separate;line-height:100%;">
-                                                <tr>    
-                                                    <td align="center" bgcolor="#a42056" role="presentation"
-                                                        style="border:none;border-radius:3px;color:#ffffff;cursor:auto;padding:15px 25px;"
-                                                        valign="middle">
-                                                        <p
-                                                            style="background:#a42056;color:#ffffff;font-family:'Helvetica Neue',Arial,sans-serif;font-size:15px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;">
-                                                            Accèder aux offres
-                                                        </p>
-                                                    </td>
-                                                </tr>
-                                            </table>
-
-                                        </td>
-                                    </tr>
-
                                     <tr>
                                         <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                             <div
                                                 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
                                                 <br>Si jamais le contenu du mail ne s'affiche pas correctement, veuillez
-                                                cliquer sur le lien suivant: <a href="{{ https://externatic.Fr }}">lien
+                                                cliquer sur le lien suivant: <a href="{{ http://localhost:3000 }}">lien
                                                     de redirection.</a>
                                                 <br>
                                                 <br><br>Bien cordialement,<br><br> Groupe Externatic<br>1 Rue Racine,
                                                 44000 Nantes<br>02 85 52 26 33<br>
-                                                <a href="https://externatic.fr" style="color:#a42056">externatic.fr</a>
+                                                <a href="http://localhost:3000" style="color:#a42056">externatic.fr</a>
                                             </div>
 
                                         </td>
@@ -410,9 +386,9 @@ const sendUserAccountCreation = (req, res) => {
 const sendCompanyAccountCreation = (req, res) => {
   const { email } = req.body;
 
-  const resetPasswordLink = `http://localhost:3000/company/forgottenpassword?email=${encodeURIComponent(
-    email
-  )}`;
+  const resetPasswordLink = `${
+    process.env.FRONTEND_URL
+  }/company/forgottenpassword?email=${encodeURIComponent(email)}`;
 
   const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -694,7 +670,7 @@ const sendCompanyAccountCreation = (req, res) => {
                                                         <br>
                                                         <br><br>Bien cordialement,<br><br> Groupe Externatic<br>1 Rue Racine,
                                                         44000 Nantes<br>02 85 52 26 33<br>
-                                                        <a href="https://externatic.fr" style="color:#a42056">externatic.fr</a>
+                                                        <a href="http://localhost:3000" style="color:#a42056">externatic.fr</a>
                                                     </div>
         
                                                 </td>
@@ -1098,12 +1074,12 @@ const sendContactMessageMail = (req, res) => {
                                             <div
                                                 style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:14px;line-height:20px;text-align:left;color:#525252;">
                                                 <br>Si jamais le contenu du mail ne s'affiche pas correctement, veuillez
-                                                cliquer sur le lien suivant: <a href="{{ https://externatic.Fr }}">lien
+                                                cliquer sur le lien suivant: <a href="{{ http://localhost:3000 }}">lien
                                                     de redirection.</a>
                                                 <br>
                                                 <br><br>Bien cordialement,<br><br> Groupe Externatic<br>1 Rue Racine,
                                                 44000 Nantes<br>02 85 52 26 33<br>
-                                                <a href="https://externatic.fr" style="color:#a42056">externatic.fr</a>
+                                                <a href="http://localhost:3000" style="color:#a42056">externatic.fr</a>
                                             </div>
 
                                         </td>
@@ -1245,9 +1221,9 @@ const sendPasswordResetMail = (req, res) => {
 
   // const user avec un fetch pour récupérer les infos de l'utilisateur
 
-  const resetPasswordLink = `http://localhost:3000/forgottenpassword?email=${encodeURIComponent(
-    email
-  )}`;
+  const resetPasswordLink = `${
+    process.env.FRONTEND_URL
+  }/forgottenpassword?email=${encodeURIComponent(email)}`;
 
   const mailOptions = {
     from: process.env.SMTP_SENDIN_USER, // c'est l'adresse à partir de laquelle l'email sera envoyé
@@ -1525,7 +1501,7 @@ const sendPasswordResetMail = (req, res) => {
                                                 <br>
                                                 <br><br>Bien cordialement,<br><br> Groupe Externatic<br>1 Rue Racine,
                                                 44000 Nantes<br>02 85 52 26 33<br>
-                                                <a href="https://externatic.fr" style="color:#a42056">externatic.fr</a>
+                                                <a href="http://localhost:3000" style="color:#a42056">externatic.fr</a>
                                             </div>
 
                                         </td>
@@ -1667,9 +1643,9 @@ const sendPasswordResetCompany = (req, res) => {
 
   // const user avec un fetch pour récupérer les infos de l'utilisateur
 
-  const resetPasswordLink = `http://localhost:3000/company/forgottenpassword?email=${encodeURIComponent(
-    email
-  )}`;
+  const resetPasswordLink = `${
+    process.env.FRONTEND_URL
+  }/company/forgottenpassword?email=${encodeURIComponent(email)}`;
 
   const mailOptions = {
     from: process.env.SMTP_SENDIN_USER, // c'est l'adresse à partir de laquelle l'email sera envoyé
@@ -1947,7 +1923,7 @@ const sendPasswordResetCompany = (req, res) => {
                                                   <br>
                                                   <br><br>Bien cordialement,<br><br> Groupe Externatic<br>1 Rue Racine,
                                                   44000 Nantes<br>02 85 52 26 33<br>
-                                                  <a href="https://externatic.fr" style="color:#a42056">externatic.fr</a>
+                                                  <a href="http://localhost:3000" style="color:#a42056">externatic.fr</a>
                                               </div>
   
                                           </td>

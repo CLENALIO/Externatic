@@ -142,8 +142,8 @@ function Registration() {
 
         {isSent && (
           <Popup
-            title=""
-            message="Un email de confirmation vous a été envoyé. Consultez votre boite mail et suivez les instructions pour confirmer votre inscription."
+            title="Bienvenue"
+            message="Votre espace candidat a bien été crée. Un email vous a été envoyé."
             onClose={handlePopupClose}
             buttonname="Se connecter"
           />
