@@ -190,14 +190,7 @@ function Router() {
             </ProtectedforCompany>
           }
         />
-        <Route
-          path="/company/firstlogin"
-          element={
-            <ProtectedforCompany>
-              <CompanyFirstLogin />
-            </ProtectedforCompany>
-          }
-        />
+        <Route path="/company/firstlogin" element={<CompanyFirstLogin />} />
         <Route
           path="/company/presentation"
           element={

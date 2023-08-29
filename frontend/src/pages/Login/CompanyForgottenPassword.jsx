@@ -53,7 +53,7 @@ function CompanyForgottenPassword() {
   };
 
   const returnToLogin = () => {
-    navigate("/login");
+    navigate("/logincompany");
   };
 
   return (

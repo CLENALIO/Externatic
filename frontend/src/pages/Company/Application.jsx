@@ -89,7 +89,7 @@ function Application() {
           <div className="application_details">
             <h2 className="position">{result.job}</h2>
             <h2 className="date_location">
-              31/05/2023 | {result.contract_type} | {result.city_job}
+              {result.contract_type} | {result.city_job}
             </h2>
           </div>
         )}

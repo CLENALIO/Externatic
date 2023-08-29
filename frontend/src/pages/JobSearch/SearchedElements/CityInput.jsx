@@ -13,7 +13,7 @@ function CityInput() {
   const [cityList, setCityList] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/citiesOffers")
+    fetch(`${import.meta.env.VITE_BACKEND_URL}/api/citiesOffers`)
       .then((response) => response.json())
       .then((data) => setCityList(data))
       .catch((err) => console.error(err));

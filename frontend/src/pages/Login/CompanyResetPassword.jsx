@@ -62,7 +62,7 @@ function CompanyResetPassword() {
   };
 
   const returnToLogin = () => {
-    navigate("/login");
+    navigate("/logincompany");
   };
 
   return (

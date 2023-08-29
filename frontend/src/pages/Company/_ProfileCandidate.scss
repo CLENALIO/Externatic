@@ -10,12 +10,13 @@
   }
 
   .picture {
-    height: 10%;
+    height: 10dvh;
     display: flex;
     justify-content: center;
 
     img {
       border-radius: 50%;
+      max-height: 100%;
     }
   }
   .cv {

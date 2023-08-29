@@ -410,7 +410,7 @@ const sendUserAccountCreation = (req, res) => {
 const sendCompanyAccountCreation = (req, res) => {
   const { email } = req.body;
 
-  const resetPasswordLink = `http://localhost:3000/company/firstlogin?email=${encodeURIComponent(
+  const resetPasswordLink = `http://localhost:3000/company/forgottenpassword?email=${encodeURIComponent(
     email
   )}`;
 
@@ -645,7 +645,7 @@ const sendCompanyAccountCreation = (req, res) => {
                                                         style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:16px;line-height:22px;text-align:left;color:#555;">
                                                         Suite à la création de votre compte sur notre site, nous vous envoyons
                                                         ce mail afin de vous permettre de réinitialiser votre mot de passe et
-                                                        de confirimer votre compte.<br></br>
+                                                        de confirmer votre compte.<br></br>
                                                         <br></br>
                                                         <b>Identifiant:</b>${email}<br><br>
     
