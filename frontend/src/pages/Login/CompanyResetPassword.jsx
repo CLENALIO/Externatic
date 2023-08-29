@@ -62,7 +62,7 @@ function CompanyResetPassword() {
   };
 
   const returnToLogin = () => {
-    navigate("/login");
+    navigate("/logincompany");
   };
 
   return (
@@ -104,8 +104,6 @@ function CompanyResetPassword() {
       {showModal && (
         <div className="modal-container">
           <div className="modal">
-            {/* <img src="/chemin/vers/le/logo.png" alt="Logo" /> */}
-
             <h2>✨ Votre mot de passe a été modifié !</h2>
 
             <p>

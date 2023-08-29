@@ -24,7 +24,6 @@ function ContractInput() {
       .then((data) => setContractList(data))
       .catch((err) => console.error(err));
   }, []);
-  // ainsi, le contract list est utilisé pour le map
 
   return (
     <select onChange={handleSelect} value={contractLS || searchContract}>

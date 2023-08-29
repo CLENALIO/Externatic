@@ -53,7 +53,7 @@ function CompanyForgottenPassword() {
   };
 
   const returnToLogin = () => {
-    navigate("/login");
+    navigate("/logincompany");
   };
 
   return (
@@ -92,8 +92,6 @@ function CompanyForgottenPassword() {
       {showModal && (
         <div className="modal-container">
           <div className="modal">
-            {/* <img src="/chemin/vers/le/logo.png" alt="Logo" /> */}
-
             <h2>📨 Email de réinitialisation envoyé !</h2>
 
             <p>

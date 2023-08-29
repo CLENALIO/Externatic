@@ -7,7 +7,6 @@ const { hashPassword } = require("./services/auth");
 const { verifyPassword, verifyCompanyPassword } = require("./services/auth");
 
 const { verifyToken } = require("./services/auth");
-/* A ajouter sur les routes concernées */
 
 const applicationControllers = require("./controllers/applicationControllers");
 
@@ -114,9 +113,6 @@ router.put(
   hashPassword,
   userControllers.editPassword
 );
-
-/* router.get("/api/user/preference/:id", userControllers.getPreference); */
-/* router.put("/api/user/preference/:id", userControllers.editPreference); */
 
 router.put("/api/user/:id", userControllers.editById);
 router.post("/api/user/register", hashPassword, userControllers.add);

@@ -123,7 +123,6 @@ function OfferCreation() {
     <div className="offer_creation">
       <HeaderBasic />
       <div className="boxWithoutHeader">
-        {/* {!posted && ( */}
         <div>
           <div className="page_title">
             <h1>Nouvelle offre</h1>
@@ -177,16 +176,12 @@ function OfferCreation() {
                 type="text"
               />
 
-              <InputListe
+              <InputTexte
                 label="Localisation"
-                placeholder="Selectionner la ville"
+                placeholder="Indiquer la ville"
                 name="city_job"
                 handleChange={handleChange}
-                data={[
-                  { value: "Nantes", name: "Nantes" },
-                  { value: "Angers", name: "Angers" },
-                  { value: "Bordeaux", name: "Bordeaux" },
-                ]}
+                type="text"
               />
 
               <InputListe
